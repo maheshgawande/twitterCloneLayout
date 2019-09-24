@@ -36,6 +36,17 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
+/*- Selction CSS -*/
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--dark-theme-color);
+  background: var(--primary-color);
+}
+
+::selection {
+  color: var(--dark-theme-color);
+  background: var(--primary-color);
+}
 /*- a -*/
 a {
   text-decoration: none;
