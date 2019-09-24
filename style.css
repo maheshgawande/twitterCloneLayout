@@ -51,6 +51,7 @@ body {
 a {
   text-decoration: none;
   color: var(--dark-theme-color);
+  transition: all 0.2s ease-in-out;
 }
 .a-container {
   width: auto;
@@ -160,7 +161,7 @@ svg {
 .container {
   width: 100%;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   position: relative;
 }
@@ -169,7 +170,7 @@ svg {
 header {
   width: 27%;
   min-width: 88px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -181,8 +182,10 @@ header {
 .header-container {
   width: 275px;
   padding: 0 14px 0 10px;
-  overflow-y: auto;
+  /* overflow-y: hidden; */
   position: sticky;
+  top: 0;
+  left: 0;
 }
 .header-img {
   width: 1.64rem;
@@ -215,6 +218,7 @@ header {
 }
 .header-nav .a {
   border-radius: 50px;
+  transition: all 0.2s ease-in-out;
 }
 .header-nav .a-container:hover .a,
 .header-nav .a-container:focus .a {
