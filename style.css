@@ -293,15 +293,15 @@ section {
   padding: 0 8px;
 }
 .tweet-stream-input textarea {
-  resize: vertical;
+  resize: none;
   width: 100%;
-  height: 100%;
   margin: 12px 0;
   display: block;
   font-size: 19px;
   border: none;
   color: var(--dark-theme-color);
   background-color: var(--dark-theme-bg);
+  overflow: hidden;
 }
 .tweet-stream-utility {
   width: 100%;

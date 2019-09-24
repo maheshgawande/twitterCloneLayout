@@ -10,6 +10,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" defer />
+    <script src="textarea_autoresize.js" defer></script>
     <script>
       window.addEventListener("load", () => {
         document.querySelector(".preloader").classList.add("preloader-hide");
@@ -17,7 +18,7 @@
     </script>
     <title>Twitter-clone</title>
   </head>
-  <body class="dark-theme">
+  <body class="dark-theme" onload="init()">
     <!-- Preloader HTML -->
     <div class="preloader">
       <img src="assets/svg/Twitter_Logo_Blue.svg" alt="twitter" />
@@ -220,6 +221,7 @@
               <div class="tweet-stream">
                 <div class="tweet-stream-input">
                   <textarea
+                    id="text"
                     maxlength="140"
                     name="tweet"
                     rows="1"
