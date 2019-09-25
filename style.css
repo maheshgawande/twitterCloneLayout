@@ -50,6 +50,7 @@ body {
 /*- a -*/
 a {
   text-decoration: none;
+  display: inline-flex;
   color: var(--dark-theme-color);
   transition: all 0.2s ease-in-out;
 }
@@ -286,7 +287,7 @@ section {
 }
 
 /*- tweet-stream -*/
-.tweet-stream-container {
+.tweet-input-container {
   margin-top: 10px;
   padding: 0 15px;
   display: flex;
@@ -296,16 +297,16 @@ section {
 .avatar-container {
   margin-right: 0 5px;
 }
-.tweet-stream {
+.tweet-input {
   width: 100%;
   height: 100%;
   display: block;
   margin-bottom: 5px;
 }
-.tweet-stream-input {
+.input {
   padding: 0 8px;
 }
-.tweet-stream-input textarea {
+.input textarea {
   resize: none;
   width: 100%;
   margin: 12px 0;
@@ -316,7 +317,7 @@ section {
   background-color: var(--dark-theme-bg);
   overflow: hidden;
 }
-.tweet-stream-utility {
+.tweet-input-utility {
   width: 100%;
   height: 100%;
   margin-top: 20px;
@@ -357,8 +358,172 @@ section {
   width: 1.1rem;
   height: 1.1rem;
 }
-.tweet-stream .tweet-btn {
+.utility-right .tweet-btn {
   margin-left: 10px;
+}
+
+/*----- Stream-container -----*/
+.stream-container {
+  width: 100%;
+  height: auto;
+}
+
+/*- Stream -*/
+.stream {
+  margin: 0;
+  padding: 10px;
+  border-bottom: solid var(--primary-border-color) 1px;
+}
+.stream:hover {
+  cursor: pointer;
+  background-color: #15181c;
+}
+
+/*- Context -*/
+.context-container {
+  margin-left: 58px;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+.context {
+  margin-left: -24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.context svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/*- Content -*/
+.content {
+  margin-left: 58px;
+}
+
+/*- Stream-header-container -*/
+.stream-header-container {
+  display: flex;
+  height: 22px;
+}
+.main-avatar {
+  float: left;
+  position: absolute;
+  margin-top: 3px;
+  margin-left: -58px;
+}
+.main-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.fullname-container {
+  margin-right: 5px;
+}
+.user-badge {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+.userame,
+.time {
+  font-weight: 100;
+}
+.userame {
+  margin-left: 5px;
+}
+.dot {
+  margin: 0 5px;
+}
+.fullname:hover,
+.timestamp:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/*- Tweet-text-container -*/
+.tweet-text-container {
+  margin: 3px 0;
+}
+.hashtag {
+  color: var(--primary-color);
+}
+.hashtag s {
+  text-decoration: none;
+}
+.hashtag:hover span {
+  text-decoration: underline;
+}
+
+/*- Stream-media-container -*/
+.stream-media-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+.media-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/*- stream-footer-container -*/
+.stream-footer-container {
+  max-width: 425px;
+  margin-top: 10px;
+}
+.stream-footer-container svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--dark-theme-color);
+}
+.tweet-action {
+  min-width: 80px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.tweet-action .a {
+  padding: 8px;
+}
+.tweet-action-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tweet-action-count {
+  font-weight: bold;
+  font-size: 12px;
+}
+.tweet-action-btn .icon-container {
+  font-size: 16px;
+}
+.comments-btn:hover,
+.comments-btn:hover svg {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+.comments-btn:hover .a {
+  background-color: #162632;
+}
+.retweet-btn:hover,
+.retweet-btn:hover svg {
+  color: #21c16a;
+  fill: #21c16a;
+}
+.retweet-btn:hover .a {
+  background-color: #152923;
+}
+.likes-btn:hover,
+.likes-btn:hover svg {
+  color: #e0245e;
+  fill: #e0245e;
+}
+.likes-btn:hover .a {
+  background-color: #2a1a23;
 }
 
 /*----- Main-aside CSS -----*/
